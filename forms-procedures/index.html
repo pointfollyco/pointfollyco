@@ -5,141 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Forms &amp; Procedures | Point Folly Co.</title>
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #f7f5ef;
-      color: #111;
-      font-family: Georgia, serif;
-    }
-
-    header {
-      width: min(900px, 90vw);
-      margin: 32px auto 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      border-bottom: 2px solid #111;
-      padding-bottom: 16px;
-    }
-
-    .site-title {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #111;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 16px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    nav a {
-      color: #111;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      opacity: 0.6;
-    }
-
-    main {
-      width: min(900px, 90vw);
-      border: 2px solid #111;
-      padding: 48px;
-      box-sizing: border-box;
-      position: relative;
-      margin: 0 auto 48px;
-      min-height: 520px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(42px, 8vw, 88px);
-      line-height: 0.9;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-    }
-
-    .dept {
-      margin-top: 8px;
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .notice {
-      margin-top: 96px;
-      font-size: 18px;
-      line-height: 1.6;
-      max-width: 540px;
-    }
-
-    .code {
-      margin-top: 48px;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .logo {
-      position: absolute;
-      right: 48px;
-      bottom: 48px;
-      width: 170px;
-      opacity: 0.9;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        display: block;
-      }
-
-      nav {
-        justify-content: flex-start;
-        margin-top: 16px;
-      }
-
-      main {
-        padding: 32px;
-      }
-
-      .notice {
-        margin-top: 64px;
-      }
-
-      .logo {
-        position: static;
-        display: block;
-        width: 120px;
-        margin: 48px auto 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <header>
-    <a class="site-title" href="/">Point Folly Co.</a>
-
-    <nav>
-      <a href="/charter/">Charter</a>
-      <a href="/divisions/">Divisions</a>
-      <a href="/public-records/">Public Records</a>
-      <a href="/forms-procedures/">Forms &amp; Procedures</a>
-      <a href="/inquiries/">Inquiries</a>
-    </nav>
-  </header>
+  <div id="site-header"></div>
 
   <main>
     <h1>Forms &amp; Procedures</h1>
@@ -154,5 +24,7 @@
 
     <img src="/pfc_logo.png" alt="Point Folly Co. Emblem" class="logo">
   </main>
+
+  <script src="/script.js"></script>
 </body>
 </html>
