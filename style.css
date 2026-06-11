@@ -45,6 +45,14 @@ nav a:hover {
   opacity: 0.6;
 }
 
+.notice a {
+  color: #111;
+}
+
+.notice a:hover {
+  opacity: 0.6;
+}
+
 main {
   width: min(900px, 90vw);
   border: 2px solid #111;
