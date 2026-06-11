@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Point Folly Co.</title>
+
   <style>
     body {
       margin: 0;
@@ -11,9 +12,45 @@
       background: #f7f5ef;
       color: #111;
       font-family: Georgia, serif;
+    }
+
+    header {
+      width: min(900px, 90vw);
+      margin: 32px auto 24px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 2px solid #111;
+      padding-bottom: 16px;
+    }
+
+    .site-title {
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #111;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
     }
 
     main {
@@ -22,6 +59,8 @@
       padding: 48px;
       box-sizing: border-box;
       position: relative;
+      margin: 0 auto 48px;
+      min-height: 520px;
     }
 
     h1 {
@@ -43,6 +82,7 @@
       margin-top: 96px;
       font-size: 18px;
       line-height: 1.6;
+      max-width: 540px;
     }
 
     .code {
@@ -51,6 +91,7 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
+
     .logo {
       position: absolute;
       right: 48px;
@@ -59,8 +100,15 @@
       opacity: 0.9;
     }
 
-    /*Phone Rules*/
     @media (max-width: 700px) {
+      header {
+        display: block;
+      }
+
+      nav {
+        justify-content: flex-start;
+        margin-top: 16px;
+      }
 
       main {
         padding: 32px;
@@ -73,14 +121,26 @@
       .logo {
         position: static;
         display: block;
-        width: 120 px;
+        width: 120px;
         margin: 48px auto 0;
       }
     }
-    
   </style>
 </head>
+
 <body>
+  <header>
+    <a class="site-title" href="/">Point Folly Co.</a>
+
+    <nav>
+      <a href="/charter/">Charter</a>
+      <a href="/divisions/">Divisions</a>
+      <a href="/public-records/">Public Records</a>
+      <a href="/forms-procedures/">Forms &amp; Procedures</a>
+      <a href="/inquiries/">Inquiries</a>
+    </nav>
+  </header>
+
   <main>
     <h1>Point Folly Co.</h1>
     <div class="dept">Department of Articulated Phenomena</div>
@@ -91,6 +151,7 @@
     </div>
 
     <div class="code">PFC/DAP/PUBLIC-0</div>
+
     <img src="pfc_logo.png" alt="Point Folly Co. Emblem" class="logo">
   </main>
 </body>
