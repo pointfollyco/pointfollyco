@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Point Folly Co.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Point Folly Co.</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #f7f5ef;
+      color: #111;
+      font-family: Georgia, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      width: min(760px, 86vw);
+      border: 2px solid #111;
+      padding: 48px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 88px);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .dept {
+      margin-top: 8px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .notice {
+      margin-top: 96px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .code {
+      margin-top: 48px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
-    <h1>POINT FOLLY CO.</h1>
-    <p>Department of Articulated Phenomena</p>
-    <p>Materials are being prepared for public release</p>
-    <p>Further articulation is ongoing.</p>
+  <main>
+    <h1>Point Folly Co.</h1>
+    <div class="dept">Department of Articulated Phenomena</div>
+
+    <div class="notice">
+      <p>Materials are being prepared for public release.</p>
+      <p>Further articulation is ongoing.</p>
+    </div>
+
+    <div class="code">PFC/DAP/PUBLIC-0</div>
+  </main>
 </body>
 </html>
