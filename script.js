@@ -28,6 +28,45 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(response => response.text())
       .then(data => {
         divisionDirectoryTarget.innerHTML = data;
+
+        const currentPath = window.location.pathname;
+
+        let parentPath = null;
+
+        if (currentPath.includes("/divisions/")) {
+
+          const parts = currentPath
+            .split("/")
+            .filter(part => part);
+
+          if (parts.length >= 3) {
+
+            parentPath =
+              "/" +
+              parts.slice(0, parts.length - 1).join("/") +
+              "/";
+
+          }
+        }
+
+        divisionDirectoryTarget
+          .querySelectorAll("a")
+          .forEach(link => {
+
+            const linkPath = 
+              new URL(link.href).pathname;
+
+            if (linkPath === currentPath) {
+              link.classList.add("current");
+            }
+
+            if (
+                parentPath &&
+                linkPath === parentPath
+              ) {
+                link.classList.add("parent");
+              }
+          });
       });
   }
 
