@@ -53,6 +53,38 @@ nav a:hover {
   opacity: 0.6;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #f7f5ef;
+  border: 2px solid #111;
+  padding: 12px;
+  z-index: 10;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+
+.nested-menu {
+  top: -14px;
+  left: 100%;
+}
+
 main {
   width: min(900px, 90vw);
   border: 2px solid #111;
@@ -124,4 +156,16 @@ h1 {
     width: 120px;
     margin: 48px auto 0;
   }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    padding: 8px 0 8px 16px;
+  }
+
+  .nested-menu {
+    position: static;
+    padding-left: 16px;
+  }
+  
 }
