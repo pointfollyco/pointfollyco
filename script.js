@@ -20,6 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
+  const divisionDirectoryTarget =
+    document.getElementById("division-directory");
+
+  if (divisionDirectoryTarget) {
+    fetch("/division-directory.html")
+      .then(response => response.text())
+      .then(data => {
+        divisionDirectoryTarget.innerHTML = data;
+      });
+  }
+
   document.addEventListener("click", event => {
     const toggle = event.target.closest(".dropdown-toggle");
   
