@@ -163,7 +163,7 @@ h1 {
 }
 
 .division-directory-title {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 
@@ -171,7 +171,7 @@ h1 {
 }
 
 .division-directory-links {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -200,6 +200,14 @@ h1 {
 
   h1 {
     font-size: clamp(32px, 7vw, 56px);
+  }
+
+  .division-directory-title {
+    font-size: 10px;
+  }
+
+  .division-directory-links {
+    font-size: 12px;
   }
 
   .notice {
