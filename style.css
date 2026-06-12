@@ -53,11 +53,11 @@ nav a:hover {
   opacity: 0.6;
 }
 
-.dropdown {
+nav .dropdown {
   position: relative;
 }
 
-.dropdown-menu {
+nav .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -69,18 +69,18 @@ nav a:hover {
   z-index: 10;
 }
 
-.dropdown:hover > .dropdown-menu,
-.dropdown:focus-within > .dropdown-menu {
+nav .dropdown:hover > .dropdown-menu,
+nav .dropdown:focus-within > .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu a {
+nav .dropdown-menu a {
   display: block;
   padding: 6px 0;
   white-space: nowrap;
 }
 
-.nested-menu {
+nav .nested-menu {
   top: -14px;
   left: 100%;
 }
