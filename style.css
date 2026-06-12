@@ -189,7 +189,7 @@ h1 {
 }
 
 .division-directory-links a.parent {
-  font-weight: underline;
+  text-decoration: underline;
 }
 
 #division-directory + .notice {
