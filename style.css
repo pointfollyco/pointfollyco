@@ -131,7 +131,7 @@ h1 {
 }
 
 .notice {
-  margin-top: 96px;
+  margin-top: 48px;
   font-size: 18px;
   line-height: 1.6;
   max-width: 540px;
@@ -163,7 +163,7 @@ h1 {
 }
 
 .division-directory-title {
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 
@@ -171,7 +171,7 @@ h1 {
 }
 
 .division-directory-links {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
