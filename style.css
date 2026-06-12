@@ -69,8 +69,28 @@ nav .dropdown-menu {
   z-index: 10;
 }
 
-nav .dropdown:hover > .dropdown-menu,
-nav .dropdown:focus-within > .dropdown-menu {
+.nav-item-with-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #111;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  opacity: 0.6;
+}
+
+.dropdown.open > .dropdown-menu {
   display: block;
 }
 
