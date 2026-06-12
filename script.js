@@ -22,24 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("click", event => {
     const toggle = event.target.closest(".dropdown-toggle");
-
+  
     if (toggle) {
       event.preventDefault();
       event.stopPropagation();
-
+  
       const dropdown = toggle.closest(".dropdown");
       const parentMenu = dropdown.parentElement;
-
-      parentMenu.querySelectorAll(":scope > .dropdown.open").forEach(openDropdown => {
-        if (openDropdown !== dropdown) {
-          openDropdown.classList.remove("open");
+  
+      Array.from(parentMenu.children).forEach(sibling => {
+        if (
+          sibling !== dropdown &&
+          sibling.classList.contains("dropdown") &&
+          sibling.classList.contains("open")
+        ) {
+          sibling.classList.remove("open");
         }
       });
-
+  
       dropdown.classList.toggle("open");
       return;
     }
-
+  
     document.querySelectorAll(".dropdown.open").forEach(dropdown => {
       dropdown.classList.remove("open");
     });
