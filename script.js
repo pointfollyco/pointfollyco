@@ -28,6 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
       event.stopPropagation();
 
       const dropdown = toggle.closest(".dropdown");
+      const parentMenu = dropdown.parentElement;
+
+      parentMenu.querySelectorAll(":scope > .dropdown.open").forEach(openDropdown => {
+        if (openDropdown !== dropdown) {
+          openDropdown.classList.remove("open");
+        }
+      });
+
       dropdown.classList.toggle("open");
       return;
     }
