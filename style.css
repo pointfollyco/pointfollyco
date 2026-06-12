@@ -184,6 +184,14 @@ h1 {
   opacity: 0.6;
 }
 
+.division-directory-links a.current {
+  font-weight: bold;
+}
+
+.division-directory-links a.parent {
+  font-weight: underline;
+}
+
 #division-directory + .notice {
   margin-top: 48px;
 }
