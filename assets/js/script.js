@@ -103,13 +103,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("archive-viewer");
 
   if (archiveViewer) {
-    .then(response => response.json())
-    .then(documents => {
 
-      console.log(documents);
+    fetch("/assets/data/documents.json")
+      .then(response => response.json())
+      .then(documents => {
+
+        console.log(documents);
 
     });
-    
+
   }
 
 });
