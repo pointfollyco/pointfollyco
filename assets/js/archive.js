@@ -103,8 +103,16 @@ if (archiveViewer) {
     });
 
     filteredDocuments.sort((a, b) => {
-      if (sortValue === "title") {
+      if (sortValue === "title-az") {
         return a.title.localeCompare(b.title);
+      }
+
+      if (sortValue === "title-za") {
+          return b.title.localeCompare(a.title);
+      }
+
+      if (sortValue === "code-za") {
+          return b.code.localeCompare(a.code);
       }
 
       if (sortValue === "newest") {
