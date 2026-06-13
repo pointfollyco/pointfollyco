@@ -99,4 +99,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const archiveViewer = 
+    document.getElementById("archive-viewer");
+
+  if (archiveViewer) {
+    .then(response => response.json())
+    .then(documents => {
+
+      console.log(documents);
+
+    });
+    
+  }
+
 });

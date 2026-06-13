@@ -1,0 +1,80 @@
+[
+    {
+      "title": "Semiotic Habitat Survey",
+      "code": "PFC-SRD-FCU-FRM-0001",
+      "type": "form",
+      "origin": "pfc",
+      "division": "SRD",
+      "unit": "FCU",
+      "status": "available",
+      "date": "2026-06-13",
+      "url": "/assets/documents/pfc-srd-fcu-frm-0001.pdf",
+      "description": "Blank field form for the observation of semiotic habitats and memetic populations.",
+      "tags": ["semiotics", "memetics", "field study"]
+    },
+    {
+      "title": "Semiotic Habitat Survey Procedure",
+      "code": "PFC-SRD-FCU-PRO-0001",
+      "type": "procedure",
+      "origin": "pfc",
+      "division": "SRD",
+      "unit": "FCU",
+      "status": "available",
+      "date": "2026-06-13",
+      "url": "/assets/documents/pfc-srd-fcu-pro-0001.pdf",
+      "description": "Procedure for conducting and submitting a semiotic habitat survey.",
+      "tags": ["semiotics", "procedure", "field study"]
+    },
+    {
+      "title": "Threshold Condition Report",
+      "code": "PFC-LED-TMU-FRM-0001",
+      "type": "form",
+      "origin": "pfc",
+      "division": "LED",
+      "unit": "TMU",
+      "status": "available",
+      "date": "2026-06-13",
+      "url": "/assets/documents/pfc-led-tmu-frm-0001.pdf",
+      "description": "Blank form for documenting threshold conditions and related field observations.",
+      "tags": ["threshold", "liminal", "field report"]
+    },
+    {
+      "title": "Temporal Anomaly Report",
+      "code": "PFC-LED-TAU-FRM-0001",
+      "type": "form",
+      "origin": "pfc",
+      "division": "LED",
+      "unit": "TAU",
+      "status": "available",
+      "date": "2026-06-13",
+      "url": "/assets/documents/pfc-led-tau-frm-0001.pdf",
+      "description": "Blank form for documenting temporal irregularities and anomaly events.",
+      "tags": ["temporal", "anomaly", "field report"]
+    },
+    {
+      "title": "Semiotic Habitat Survey — Sample Record",
+      "code": "PFC-SRD-FCU-REC-0001",
+      "type": "record",
+      "origin": "pfc",
+      "division": "SRD",
+      "unit": "FCU",
+      "status": "published",
+      "date": "2026-06-13",
+      "url": "/assets/documents/pfc-srd-fcu-rec-0001.pdf",
+      "description": "Completed sample semiotic habitat survey admitted to the public record.",
+      "tags": ["semiotics", "memetics", "record"]
+    },
+    {
+      "title": "Civilian Threshold Observation",
+      "code": "CIV-LED-TMU-REC-0001",
+      "type": "record",
+      "origin": "civilian",
+      "division": "LED",
+      "unit": "TMU",
+      "status": "published",
+      "date": "2026-06-13",
+      "url": "/assets/documents/civ-led-tmu-rec-0001.pdf",
+      "description": "Reviewed civilian-submitted threshold observation admitted to the public record.",
+      "tags": ["threshold", "civilian", "record"]
+    }
+  ]
