@@ -126,26 +126,22 @@ document.addEventListener("DOMContentLoaded", () => {
         archiveViewer.innerHTML =
           filteredDocuments
             .map(doc => `
-              <div class="document-card">
+              <article class="document-card">
 
-                <div class="document-code">
-                  ${doc.code}
-                </div>
+                <div class="document-code">${doc.code}</div>
                 
-                <div class="document-title">
-                  ${doc.title}
-                </div>
+                <div class="document-title">${doc.title}</div>
 
                 <div class="document-meta">
-                  ${doc.division} / ${doc.unit}
-                  .
-                  ${doc.type}
+                  ${doc.division}${doc.unit} ? " / " + doc.unit : ""}
+                  .${doc.type}
+                  .${doc.origin}
                 </div>
 
                 <div class="document-description">
                   ${doc.description}
                 </div>
-              </div>
+              </article>
             `)
             .join("");
             
