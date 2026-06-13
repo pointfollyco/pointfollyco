@@ -97,56 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".dropdown.open").forEach(dropdown => {
       dropdown.classList.remove("open");
     });
+    
   });
-
-  const archiveViewer = 
-    document.getElementById("archive-viewer");
-
-  if (archiveViewer) {
-    fetch("/assets/data/documents.json")
-      .then(response => response.json())
-      .then(documents => {
-        const archiveType = archiveViewer.dataset.archive;
-
-        let filteredDocuments = [];
-
-        if (archiveType === "forms-procedures") {
-          filteredDocuments = documents.filter(doc =>
-            doc.type === "form" ||
-            doc.type === "procedure"
-          );
-        }
-
-        if (archiveType === "public-records") {
-          filteredDocuments = documents.filter(doc =>
-            doc.type === "record"
-          );
-        }
-
-        archiveViewer.innerHTML =
-          filteredDocuments
-            .map(doc => `
-              <article class="document-card">
-
-                <div class="document-code">${doc.code}</div>
-                
-                <div class="document-title">${doc.title}</div>
-
-                <div class="document-meta">
-                  ${doc.division}${doc.unit ? " / " + doc.unit : ""}
-                  .${doc.type}
-                  .${doc.origin}
-                </div>
-
-                <div class="document-description">
-                  ${doc.description}
-                </div>
-              </article>
-            `)
-            .join("");
-            
-    });
-
-  }
 
 });

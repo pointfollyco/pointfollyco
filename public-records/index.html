@@ -20,6 +20,33 @@
       <p>No public records are currently available.</p>
     </div>
 
+    <input id="archive-search" type="search" placeholder="Search records...">
+
+    <select id="archive-origin-filter">
+      <option value="">All Records</option>
+      <option value="pfc">Point Folly Co.</option>
+      <option value="civilian">Civilian Submitted</option>
+    </select>
+
+    <select id="archive-division-filter">
+      <option value="">All Divisions</option>
+      <option value="OHSD">OHSD</option>
+      <option value="LED">LED</option>
+      <option value="SRD">SRD</option>
+    </select>
+
+    <select id="archive-unit-filter">
+      <option value="">All Units</option>
+    </select>
+
+    <select id="archive-sort">
+        <option value="code">Sort by Code</option>
+        <option value="title">Sort by Title</option>
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+    </div>
+
     <div id="archive-viewer" data-archive="public-records"></div>
 
     <div class="code">PFC/DAP/RECORDS-0</div>
@@ -28,5 +55,6 @@
   </main>
 
   <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/archive.js"></script>
 </body>
 </html>
