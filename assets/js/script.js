@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="document-title">${doc.title}</div>
 
                 <div class="document-meta">
-                  ${doc.division}${doc.unit} ? " / " + doc.unit : ""}
+                  ${doc.division}${doc.unit ? " / " + doc.unit : ""}
                   .${doc.type}
                   .${doc.origin}
                 </div>
