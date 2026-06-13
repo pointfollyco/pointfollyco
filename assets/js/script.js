@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerTarget = document.getElementById("site-header");
 
   if (headerTarget) {
-    fetch("/header.html")
+    fetch("/components/header.html")
       .then(response => response.text())
       .then(data => {
         headerTarget.innerHTML = data;
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerTarget = document.getElementById("site-footer");
 
   if (footerTarget) {
-    fetch("/footer.html")
+    fetch("/components/footer.html")
       .then(response => response.text())
       .then(data => {
         footerTarget.innerHTML = data;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("division-directory");
 
   if (divisionDirectoryTarget) {
-    fetch("/division-directory.html")
+    fetch("/components/division-directory.html")
       .then(response => response.text())
       .then(data => {
         divisionDirectoryTarget.innerHTML = data;
