@@ -123,7 +123,32 @@ document.addEventListener("DOMContentLoaded", () => {
           );
         }
 
-        console.log(filteredDocuments);
+        archiveViewer.innerHTML =
+          filteredDocuments
+            .map(doc => `
+              <div class="document-card">
+
+                <div class="document-code">
+                  ${doc.code}
+                </div>
+                
+                <div class="document-title">
+                  ${doc.title}
+                </div>
+
+                <div class="document-meta">
+                  ${doc.division} / ${doc.unit}
+                  .
+                  ${doc.type}
+                </div>
+
+                <div class="document-description">
+                  ${doc.description}
+                </div>
+              </div>
+            `)
+            .join("");
+            
     });
 
   }
