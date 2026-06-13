@@ -103,13 +103,27 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("archive-viewer");
 
   if (archiveViewer) {
-
     fetch("/assets/data/documents.json")
       .then(response => response.json())
       .then(documents => {
+        const archiveType = archiveViewer.dataset.archive;
 
-        console.log(documents);
+        let filteredDocuments = [];
 
+        if (archiveType === "forms-procedures") {
+          filteredDocuments = documents.filter(doc =>
+            doc.type === "form" ||
+            doc.type === "procedure"
+          );
+        }
+
+        if (archiveType === "public-records") {
+          filteredDocuments = documents.filter(doc =>
+            doc.type === "record"
+          );
+        }
+
+        console.log(filteredDocuments);
     });
 
   }
