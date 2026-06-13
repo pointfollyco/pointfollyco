@@ -127,7 +127,18 @@ if (archiveViewer) {
       return;
     }
 
-    archiveViewer.innerHTML = filteredDocuments
+    const resultWord =
+        filteredDocuments.length === 1 ? "document" : "documents";
+
+    const resultsCountHtml = `
+    <div class="archive-results-count">
+        Showing ${filteredDocuments.length} ${resultWord}
+        </div>
+    `;
+
+    archiveViewer.innerHTML = 
+        resultsCountHtml +
+        filteredDocuments
       .map(doc => `
         <article class="document-card">
           <div class="document-code">${doc.code}</div>
