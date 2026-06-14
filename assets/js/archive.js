@@ -26,36 +26,8 @@ if (archiveViewer) {
       applyUrlParams();
       populateUnitFilter();
 
-      if(unitFilter && urlParams.get("unit")) {
+      if (unitFilter && urlParams.get("unit")) {
           unitFilter.value = urlParams.get("unit").toUpperCase();
-      }
-
-      function applyUrlParams() {
-          const searchParam = urlParams.get("search");
-          const typeParam = urlParams.get("type");
-          const originParam = urlParams.get("origin");
-          const divisionParam = urlParams.get("division");
-          const sortParam = urlParams.get("sort");
-
-          if (searchInput && searchParam) {
-              searchInput.value = searchParam;
-          }
-
-          if (typeFilter && typeParam) {
-              typeFilter.value = typeParam.toLowerCase();
-          }
-
-          if (originFilter && originParam) {
-              originFilter.value = originParam.toLowerCase();
-          }
-
-          if (divisionFilter && divisionParam) {
-              divisionFilter.value = divisionParam.toUpperCase();
-          }
-
-          if (sortSelect && sortParam) {
-              sortSelect.value = sortParam.toLowerCase();
-          }
       }
       
       renderArchive();
@@ -81,6 +53,34 @@ if (archiveViewer) {
     unitFilter.disabled = units.length === 0;
   }
 
+  function applyUrlParams() {
+    const searchParam = urlParams.get("search");
+    const typeParam = urlParams.get("type");
+    const originParam = urlParams.get("origin");
+    const divisionParam = urlParams.get("division");
+    const sortParam = urlParams.get("sort");
+
+    if (searchInput && searchParam) {
+        searchInput.value = searchParam;
+    }
+
+    if (typeFilter && typeParam) {
+        typeFilter.value = typeParam.toLowerCase();
+    }
+
+    if (originFilter && originParam) {
+        originFilter.value = originParam.toLowerCase();
+    }
+
+    if (divisionFilter && divisionParam) {
+        divisionFilter.value = divisionParam.toUpperCase();
+    }
+
+    if (sortSelect && sortParam) {
+        sortSelect.value = sortParam.toLowerCase();
+    }
+  }
+
   function renderArchive() {
     const archiveType = archiveViewer.dataset.archive;
     const searchTerm = searchInput.value.toLowerCase();
@@ -89,6 +89,7 @@ if (archiveViewer) {
     const selectedDivision = divisionFilter.value;
     const selectedUnit = unitFilter.value;
     const sortValue = sortSelect.value;
+    updateUrlParams();
 
     let filteredDocuments = allDocuments.filter(doc => {
       if (archiveType === "forms-procedures") {
@@ -202,6 +203,41 @@ if (archiveViewer) {
         </article>
       `)
       .join("");
+  }
+
+  function updateUrlParams() {
+    const params = new URLSearchParams();
+  
+    if (searchInput && searchInput.value) {
+      params.set("search", searchInput.value);
+    }
+  
+    if (typeFilter && typeFilter.value) {
+      params.set("type", typeFilter.value);
+    }
+  
+    if (originFilter && originFilter.value) {
+      params.set("origin", originFilter.value);
+    }
+  
+    if (divisionFilter && divisionFilter.value) {
+      params.set("division", divisionFilter.value);
+    }
+  
+    if (unitFilter && unitFilter.value) {
+      params.set("unit", unitFilter.value);
+    }
+  
+    if (sortSelect && sortSelect.value && sortSelect.value !== "code-az") {
+      params.set("sort", sortSelect.value);
+    }
+  
+    const newUrl =
+      params.toString()
+        ? `${window.location.pathname}?${params.toString()}`
+        : window.location.pathname;
+  
+    window.history.replaceState({}, "", newUrl);
   }
 
   searchInput.addEventListener("input", renderArchive);
