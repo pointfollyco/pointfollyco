@@ -16,11 +16,48 @@ if (archiveViewer) {
 
   let allDocuments = [];
 
+  const urlParams = new URLSearchParams(window.location.search);
+
   fetch("/assets/data/documents.json")
     .then(response => response.json())
     .then(documents => {
       allDocuments = documents;
+
+      applyUrlParams();
       populateUnitFilter();
+
+      if(unitFilter && urlParams.get("unit")) {
+          unitFilter.value = urlParams.get("unit").toUpperCase();
+      }
+
+      function applyUrlParams() {
+          const searchParam = urlParams.get("search");
+          const typeParam = urlParams.get("type");
+          const originParam = urlParams.get("origin");
+          const divisionParam = urlParams.get("division");
+          const sortParam = urlParams.get("sort");
+
+          if (searchInput && searchParam) {
+              searchInput.value = searchParam;
+          }
+
+          if (typeFilter && typeParam) {
+              typeFilter.value = typeParam.toLowerCase();
+          }
+
+          if (originFilter && originParam) {
+              originFilter.value = originParam.toLowerCase();
+          }
+
+          if (divisionFilter && divisionParam) {
+              divisionFilter.value = divisionParam.toUpperCase();
+          }
+
+          if (sortSelect && sortParam) {
+              sortSelect.value = sortParam.toLowerCase();
+          }
+      }
+      
       renderArchive();
     });
 
