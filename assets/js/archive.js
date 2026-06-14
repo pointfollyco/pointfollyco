@@ -189,7 +189,12 @@ if (archiveViewer) {
         <article class="document-card">
           <div class="document-code">${doc.code}</div>
 
-          <div class="document-title">${doc.title}</div>
+          <div class="document-title">
+            ${doc.url
+              ? `<a href="${doc.url}" target="_blank">${doc.title}</a>`
+              :doc.title
+            }
+          </div>
 
           <div class="document-meta">
             ${doc.division}${doc.unit ? " / " + doc.unit : ""}
