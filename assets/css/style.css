@@ -229,6 +229,10 @@ h1 {
   text-decoration: none;
 }
 
+.document-title a:hover {
+  text-decoration: underline;
+}
+
 .document-meta {
   font-size: 14px;
   text-transform: uppercase;
