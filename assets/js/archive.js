@@ -11,7 +11,7 @@ if (archiveViewer) {
   const unitsByDivision = {
     OHSD: [],
     LED: ["TMU", "TAU"],
-    SRD: ["CNU", "FCU"]
+    SRD: ["CNU", "MEU"]
   };
 
   let allDocuments = [];
@@ -41,7 +41,7 @@ if (archiveViewer) {
     if (selectedDivision) {
       units = unitsByDivision[selectedDivision] || [];
     } else {
-      units = ["TMU", "TAU", "CNU", "FCU"];
+      units = ["TMU", "TAU", "CNU", "MEU"];
     }
 
     unitFilter.innerHTML = `<option value="">All Units</option>`;
