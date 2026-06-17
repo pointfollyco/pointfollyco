@@ -1,1 +1,15 @@
-[]
+[
+    {
+      "title": "Field Annotation Handbook",
+      "code": "PFC-OHSD-REF-0008FAH",
+      "type": "procedure",
+      "origin": "pfc",
+      "division": "OHSD",
+      "unit": "",
+      "status": "available",
+      "date": "2026-06-16",
+      "url": "/assets/documents/PFC-OHSD-REF-0008FAH.pdf",
+      "description": "Procedural guidance for environmental observation, condition identification, boundary delineation, and field annotation practices.",
+      "tags": ["Annotation","Field Guide"]
+    }
+  ]
