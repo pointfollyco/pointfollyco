@@ -11,5 +11,19 @@
       "url": "/assets/documents/PFC-OHSD-REF-0008FAH.pdf",
       "description": "Procedural guidance for environmental observation, condition identification, boundary delineation, and field annotation practices.",
       "tags": ["Annotation","Field Guide"]
+    },
+
+    {
+      "title": "Field Annotation Report",
+      "code": "PFC-OHSD-FRM-0008FAR",
+      "type": "form",
+      "origin": "pfc",
+      "division": "OHSD",
+      "unit": "",
+      "status": "available",
+      "date": "2026-06-19",
+      "url": "/assets/documents/PFC-OHSD-FRM-0008FAR.pdf",
+      "description": "Companion field worksheet to the Field Annotation Handbook.",
+      "tags":["Annotation", "Field Form", "Field Report"]
     }
   ]
